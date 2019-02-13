@@ -29,10 +29,12 @@ public abstract class GObject {
 	
 	public void selected() {
 		// TODO: Implement this method.
+		this.selected = true;
 	}
 	
 	public void deselected() {
 		// TODO: Implement this method.
+		this.selected = false;
 	}
 	
 	public void move(int dX, int dY) {

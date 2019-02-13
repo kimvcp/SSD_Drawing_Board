@@ -25,6 +25,9 @@ public class DrawingBoard extends JPanel {
 	
 	public void addGObject(GObject gObject) {
 		// TODO: Implement this method.
+		
+		gObjects.add(gObject);
+		repaint();
 	}
 	
 	public void groupAll() {
@@ -37,6 +40,7 @@ public class DrawingBoard extends JPanel {
 	
 	public void clear() {
 		// TODO: Implement this method.
+		gObjects.clear();
 	}
 	
 	@Override
@@ -73,6 +77,8 @@ public class DrawingBoard extends JPanel {
 	class MAdapter extends MouseAdapter {
 
 		// TODO: You need some variables here
+		private int lastX;
+		private int lastY;
 		
 		private void deselectAll() {
 			// TODO: Implement this method.

@@ -23,9 +23,7 @@ public class DrawingBoard extends JPanel {
 		setPreferredSize(new Dimension(800, 600));
 	}
 	
-	public void addGObject(GObject gObject) {
-		// TODO: Implement this method.
-		
+	public void addGObject(GObject gObject) {		
 		gObjects.add(gObject);
 		repaint();
 	}
@@ -39,8 +37,8 @@ public class DrawingBoard extends JPanel {
 	}
 	
 	public void clear() {
-		// TODO: Implement this method.
 		gObjects.clear();
+		repaint();
 	}
 	
 	@Override

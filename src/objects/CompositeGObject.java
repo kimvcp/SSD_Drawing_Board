@@ -15,16 +15,17 @@ public class CompositeGObject extends GObject {
 	}
 
 	public void add(GObject gObject) {
-		// TODO: Implement this method.
+		gObjects.add(gObject);
 	}
 
 	public void remove(GObject gObject) {
-		// TODO: Implement this method.
-	}
+		gObjects.remove(gObject);
+		}
 
 	@Override
 	public void move(int dX, int dY) {
-		// TODO: Implement this method.
+		this.x = dX;
+		this.y = dY;
 	}
 	
 	public void recalculateRegion() {
@@ -33,12 +34,12 @@ public class CompositeGObject extends GObject {
 
 	@Override
 	public void paintObject(Graphics g) {
-		// TODO: Implement this method.
+		
 	}
 
 	@Override
 	public void paintLabel(Graphics g) {
-		// TODO: Implement this method.
+
 	}
 	
 }

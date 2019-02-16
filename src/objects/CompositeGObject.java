@@ -26,6 +26,11 @@ public class CompositeGObject extends GObject {
 	public void move(int dX, int dY) {
 		this.x += dX;
 		this.y += dY;
+
+		for (GObject element: gObjects) {
+			element.move(dX, dY);
+
+		}
 	}
 	
 	public void recalculateRegion() {

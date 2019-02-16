@@ -1,5 +1,5 @@
-# Drawing_Board
- g
+# SSD Drawing Board
+
 ## Team Members
 
 ID           |           Name                     

@@ -23,8 +23,8 @@ public abstract class GObject {
 	}
 
 	public boolean pointerHit(int pointerX, int pointerY) {
-		// TODO: Implement this method.
-		return false;
+		return (pointerX >= this.x && pointerX <= this.x + this.width)
+				&& (pointerY >= this.y && pointerY <= this.y + this.height);
 	}
 	
 	public void selected() {
@@ -36,8 +36,8 @@ public abstract class GObject {
 	}
 	
 	public void move(int dX, int dY) {
-		this.x = dX;
-		this.y = dY;
+		this.x += dX;
+		this.y += dY;
 	}
 
 	public final void paint(Graphics g) {

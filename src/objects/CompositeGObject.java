@@ -34,12 +34,16 @@ public class CompositeGObject extends GObject {
 
 	@Override
 	public void paintObject(Graphics g) {
-		
+		for (GObject element: gObjects) {
+			element.paintObject(g);
+		}
 	}
 
 	@Override
 	public void paintLabel(Graphics g) {
-
+		for (GObject element: gObjects) {
+			element.paintLabel(g);
+		}
 	}
 	
 }

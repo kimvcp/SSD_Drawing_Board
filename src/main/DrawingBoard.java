@@ -103,12 +103,14 @@ public class DrawingBoard extends JPanel {
 
 			for (GObject element: gObjects) {
 				if(element.pointerHit(lastX,lastY)){
+					if(target != null) {
+						target.deselected();
+					}
+					target = element;
 					element.selected();
 					dragging = true;
-					target = element;
 				}
 			}
-			repaint();
 		}
 
 		@Override

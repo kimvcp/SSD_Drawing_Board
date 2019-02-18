@@ -29,12 +29,34 @@ public class CompositeGObject extends GObject {
 
 		for (GObject element: gObjects) {
 			element.move(dX, dY);
-
 		}
 	}
 	
 	public void recalculateRegion() {
-		// TODO: Implement this method.
+
+		GObject  gObj = gObjects.get(0);
+
+		int x = gObj.x;
+		int y = gObj.y;
+		int maxX = x + gObj.width;
+		int maxY = y + gObj.height;
+
+		for(GObject element : gObjects){
+			if(element.x < x) x = element.x;
+			if(element.y < x) y = element.y;
+			if(element.x + element.width > maxX){
+				maxX = element.x + element.width;
+			}
+			if(element.y + element.height > maxY) {
+				maxY = element.y + element.height;
+			}
+		}
+
+		this.x = x;
+		this.y = y;
+		this.width = maxX - x;
+		this.height = maxY - y;
+
 	}
 
 	@Override
